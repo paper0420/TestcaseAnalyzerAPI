@@ -1,0 +1,1846 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SYQT-03-0001-0011</title>
+    <style type="text/css">
+      
+       
+      
+      @media screen
+      {
+        body
+        {
+          background-color: rgb(255, 255, 255);
+          font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        }
+      }
+  
+      
+      @media print
+      {
+        
+        body
+        {
+          background-color: rgb(255, 255, 255);
+          font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        }
+        
+        
+        a
+        {
+          text-decoration: none;
+        }
+        
+        
+        .HeadingTable, .SubHeadingTable, .GroupHeadingTable , .GroupEndTable
+        {
+          border-width: 2px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        .ResultBlockHeading
+        {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        table.ResultTable, table.OverviewTable, table.CheckStatisticsTable
+        {
+          border-collapse: collapse;
+        }
+        
+        td.DefaultCell, td.DefineCell, td.NumberCell, td.NumberCellPositiveResult, td.NumberCellNegativeResult, 
+        td.NumberCellErrorResult, td.NumberCellInconclusiveResult, td.NumberCellNoneResult, td.NumberCellNoColor,
+        td.PositiveResultCell, td.NegativeResultCell, td.WarningCell, td.NoneResultCell, td.InconclusiveResultCell,
+        td.ErrorResultCell, th.TableHeadingCell
+        {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        .PatternSeparator
+        {
+          
+          border-style: none;
+        }
+        
+        .PositiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .NegativeResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .NoneResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .InconclusiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .ErrorResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+
+        
+        .TestcaseHeadingDefaultResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .TestcaseHeadingPositiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .TestcaseHeadingNegativeResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        table.ScreenOnly, a.Undecorated, .LinkCell
+        {
+          display: none;
+        }
+      }
+      
+      a.Undecorated:hover 
+      {
+        color:red;
+      }
+      a.Undecorated
+      { 
+        text-decoration: none; 
+      }
+      
+      .NavStyle
+      {
+        background-color: rgb(220, 221, 222);
+      }
+      
+      td.LinkCell, td.UpCell
+      {
+        
+        width:              1px;
+        white-space:        nowrap;
+      }
+
+      
+      table
+      {
+        margin-bottom:    10px;
+        vertical-align:   top; 
+        border:           0;
+        border-spacing:   1px;
+        padding:          2px;
+      }
+      table.ScreenOnly
+      {
+        vertical-align: top; 
+        margin-bottom:  10px;
+      }
+      .NoMarginBottom
+      {
+        margin-bottom:    0px;
+      }
+      .HeadingTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        margin-bottom:    30px;
+        margin-left:      auto;
+        margin-right:     auto;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .SubHeadingTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        margin-bottom:    25px;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .GroupHeadingTable, .GroupEndTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        padding-right:    20px;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .DefaultTable
+      {
+        padding:        0px;
+        border-spacing: 0px;
+      }
+      
+      .CheckStatisticsTable
+      {
+        margin-bottom: 8px;
+        padding-right:  20px;
+      }
+  
+      .OverviewTable
+      {
+        text-align:     left;
+      }
+      
+      .OverviewResultTable
+      {
+        width:          100%;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+        padding:        0px;
+        text-align:     center;
+      }
+      
+      .ResultTable
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  20px;
+      }
+      
+      .ResultTableInner
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  0px;
+      }
+  
+      table.ResultTable td, table.ChildLinkTable td
+      {
+        vertical-align: top;
+      }
+      .ChildLinkTable
+      {
+        width:          1px;
+        text-align:     left;
+      }
+      .InfoTable
+      {
+        text-align:     left;
+        padding-right:  0px;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+      }
+      .InfoTableExpand
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  0px;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+      }
+      .OverallResultTable
+      {
+        width:         50%;
+        text-align:    center;
+        margin-bottom: 20px;
+        margin-left:   auto;
+        margin-right:  auto;
+        font-weight:   bold;
+      }
+      
+      .TableHeadingCell
+      {
+        background-color: rgb(179, 179, 179);
+        font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        font-weight:      bold;
+        text-align:       center;
+      }
+  
+      .CellNoColor
+      {
+        text-align:     left;
+        vertical-align: top;
+      }   
+      
+      .DefineCell
+      {
+        background-color: rgb(179, 179, 179);
+        text-align:       left;
+      }
+      
+      .DefaultCell, .DefaultCellBold
+      {
+        background-color: rgb(229, 229, 229);
+        text-align:       left;
+      }
+      
+      .DefaultCellBold
+      {
+        font-weight:      bold;
+      }
+        
+      .NumberCell
+      {
+        background-color: rgb(229, 229, 229);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellPositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNoneResult
+      {
+        background-color: rgb(105, 105, 105);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellInconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNoColor
+      {        
+        text-align: center;
+      }
+      
+      .PositiveResultCell
+      {
+        background-color: rgb(25, 165, 88);
+      }
+    
+      .NegativeResultCell
+      {
+        background-color: rgb(240, 0, 0);
+      }
+      
+      .NoneResultCell
+      {
+        background-color: rgb(105, 105, 105);
+      }
+      
+      .InconclusiveResultCell
+      {
+        background-color: rgb(255, 165, 0);
+      }
+      
+      .ErrorResultCell
+      {
+        background-color: rgb(205, 0, 0);
+        white-space:        nowrap;
+      }
+
+      .WarningCell
+      {
+        background-color: rgb(255, 255, 0);
+      }
+
+      .TestcaseHeadingDefaultResult
+      {
+        background-color: rgb(179, 179, 179);
+      }
+      .TestcaseHeadingPositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+      }      
+      .TestcaseHeadingNegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+      }      
+      .TestcaseHeadingNoneResult
+      {
+        background-color: rgb(105, 105, 105);
+      }
+      .TestcaseHeadingInconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+      }
+      .TestcaseHeadingErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+      }
+      
+      .PatternSeparator
+      {
+        height: 0.2em;
+      }
+      
+      .NegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .PositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .NoneResult
+      {
+        background-color: rgb(105, 105, 105);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .InconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .ErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      
+      
+      
+      .Heading1
+      {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size:   26px;
+      }
+      
+      .Heading2
+      {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size:   20px;
+      }
+      
+      .Heading3
+      {
+        font-family:   arial, sans-serif;
+        font-weight:   bold;
+        font-size:     18px;
+        margin-bottom: 20px;
+        margin-top:    20px;
+      }
+      
+      .Heading4
+      {
+        font-family:   arial, sans-serif;
+        font-weight:   bold;
+        font-size:     16px;
+        margin-top:    10px;
+        margin-bottom: 10px;
+      }
+      
+      
+      img
+      {
+        Margin-bottom: 10px;
+        Margin-right:  10px;
+      }
+      
+      
+      p
+      {
+        Margin-bottom: 20px;
+      }
+      
+      
+      .DefaultTableBackground
+      {
+        background-color: rgb(229, 229, 229);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .NegativeResultBackground
+      {
+        background-color: rgb(240, 0, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .PositiveResultBackground
+      {
+        background-color: rgb(25, 165, 88);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .WarningResultBackground
+      {
+        background-color: rgb(255, 255, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .NoneResultBackground
+      {
+        background-color: rgb(105, 105, 105);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .InconclusiveResultBackground
+      {
+        background-color: rgb(255, 165, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .ErrorResultBackground
+      {
+        background-color: rgb(205, 0, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .TestGroupHeadingBackground
+      {
+        background-color: rgb(179, 179, 179);
+      }
+    
+      
+      .Indentation
+      {
+        margin-left:  20px;
+      }
+    </style>
+    <script type="text/javascript">
+      var EXPANDED = '[−]';
+      var COLLAPSED = '[+]';
+      var VISIBLE = 'Visible';
+      var HIDDEN = 'Hidden';
+      var NONE = 'none';
+      var BLOCK = '';
+      function getDivId(id) { return 'div_' + id; }
+      function getLinkId(id) { return 'lnk_' + id; }
+      function getTableId(id) { return 'tbl_' + id; }
+      function getTbl2Id(id) { return 'tbl_t' + id; }
+      
+      
+      function switchText(oldText) { return oldText == COLLAPSED ? EXPANDED : COLLAPSED ; }
+      function getStyleFromText(linkText) { return linkText == COLLAPSED ? HIDDEN : VISIBLE; }
+      
+      function getElements(tagName, elementId)
+      {
+        this.elements = [];
+        var index = 0;
+        var elm = document.getElementsByTagName(tagName);
+        var len = elm.length;
+        for (var i = 0; i < len; i++) 
+        {
+          var id = elm[i].id;
+          if (id && id.indexOf(elementId) == 0)
+          {
+            this.elements[index] = elm[i];
+            index++;
+          }
+        }
+        return this.elements;
+      }
+      function matchElements(tagName, matchId)
+      {
+        this.elements = [];
+        var index = 0;
+        var elm = document.getElementsByTagName(tagName);
+        for (var i = 0; i < elm.length; i++) 
+        {
+          var id = elm[i].id;
+          var tc = id.replace(/s[0-9]+\./, "");
+          if (tc && tc == matchId)
+          {
+            this.elements[index] = elm[i];
+            index++;
+          }
+        }
+        return this.elements;  
+      }
+      function onoff(elm, style)
+      {
+        if(elm.style.display == NONE)
+        {
+          if(style == null || style == VISIBLE)
+            elm.style.display = BLOCK;
+        }
+        else
+        {
+          if(style == null || style == HIDDEN)
+            elm.style.display = NONE;
+        }
+      }
+      function switchTagStyle(tag, id, style)
+      {
+        var divs = getElements(tag, id);
+        for(var i = 0; i < divs.length; i++)
+          onoff(divs[i], style);
+      }
+      function switchRowStyle(tbl, style)
+      {
+        var rows = tbl.rows.length;
+        for(var rowIndex=0; rowIndex < rows; rowIndex++)
+        {
+          var row = tbl.rows[rowIndex];
+          if (row.id != "on")
+            onoff(row, style);
+        }
+      }
+      function switchTableRowStyle(tableId, style)
+      {
+        var tables = getElements('table', tableId);
+        for(var i = 0; i < tables.length; i++)
+          switchRowStyle(tables[i], style);
+      }
+      function switchLinkText(linkId, newText)
+      {
+        var link = getElements('a', linkId);
+        var len = link.length;
+        for(var i = 0; i < len; i++)
+        {
+          var lnk = link[i];
+          if(newText == null)
+          {
+            var oldText = lnk.text;
+            newText = switchText(oldText)
+          }
+          lnk.text = newText;
+        }
+      }
+      function switchTag(tag, id, text)
+      {
+        var style = getStyleFromText(text);
+        switchTagStyle(tag, id, style);
+      }
+      function switchTable(id)
+      {
+        switchLinkText(getTableId(id));
+        switchTableRowStyle(getTableId(id));
+      }
+      function switchDiv(id, linkText)
+      {
+        var text = switchText(linkText);
+        switchLinkText(getLinkId(id), text);
+        switchTag('div', getDivId(id), text);
+      }      
+      function switchAll(id, linkText)
+      {
+        var text = switchText(linkText);
+        switchLinkText(getLinkId(id), text);
+        switchTag('div', getDivId(id), text);
+        var style = getStyleFromText(text);
+        switchTableRowStyle(getTbl2Id(id), style);
+      }
+      function showTable(id)
+      {
+        var tableId = getTableId(id);
+        switchLinkText(tableId, EXPANDED);
+        switchTableRowStyle(tableId, VISIBLE);
+      }
+      function hideTable(id)
+      {
+        var tableId = getTableId(id);
+        switchTableRowStyle(tableId, HIDDEN);
+        switchLinkText(tableId, COLLAPSED);
+      }
+      function showDiv(id)
+      {
+        switchLinkText(getLinkId(id), EXPANDED);
+        switchTag('div', getDivId(id), EXPANDED);
+      }
+      function showTC(id)
+      {
+        var divId = getDivId(id);
+        var elms = matchElements('div', divId); 
+        if(elms != null && elms.length > 0)
+        {
+          id = elms[0].id.replace(getDivId(''), '');
+          showDiv(id);
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <a name="TOP"></a>
+    <table class="HeadingTable">
+      <tr>
+        <td>
+          <big class="Heading1">Report: SYQT-03-0001-0011</big>
+        </td>
+      </tr>
+    </table>
+    <center>
+      <table class="OverallResultTable">
+        <tr>
+          <td class="PositiveResult">Test passed</td>
+        </tr>
+      </table>
+    </center>
+    <a name="GeneralTestInfo"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">General Test Information</div>
+        </td>
+      </tr>
+    </table>
+    <p>[Test objective] Confirm that average value of the proxy sensor send by Proxy_Sts</p>
+    <div class="Indentation">
+      <div class="Heading4">System Under Test</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Project: </td>
+            <td class="CellNoColor">V15107A</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">HW: </td>
+            <td class="CellNoColor">SOP1.5_C2</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">S/N: </td>
+            <td class="CellNoColor">LE5A3CCB10121B00700001422579110</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">HWEL [ Logistics ]: </td>
+            <td class="CellNoColor">0000598f_006_002_007</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">BTLD [ Logistics ]: </td>
+            <td class="CellNoColor">0000a32e_039_142_041</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">SWFL [ Logistics ]: </td>
+            <td class="CellNoColor">000097d2_059_124_061</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">SWFK [ Logistics ]: </td>
+            <td class="CellNoColor">0000a089_059_124_063</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">LogisticLabel[BootLoader]: </td>
+            <td class="CellNoColor">039_142_041</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">LogisticLabel[Application]: </td>
+            <td class="CellNoColor">059_124_061</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">LogisticLabel[Data]: </td>
+            <td class="CellNoColor">059_124_063</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">APL: </td>
+            <td class="CellNoColor">2207 - 25 - 2</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">DSP: </td>
+            <td class="CellNoColor">21105</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">PIC: </td>
+            <td class="CellNoColor">54</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">FBL: </td>
+            <td class="CellNoColor">xff32816.4.6177</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">A2L: </td>
+            <td class="CellNoColor">---</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Calibration: </td>
+            <td class="CellNoColor">Calib_Set_Common_report.html</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">CRETA Version: </td>
+            <td class="CellNoColor">Please check SWFK version infomation</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Test spec version: </td>
+            <td class="CellNoColor">2</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Engineer</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Windows Login Name: </td>
+            <td class="CellNoColor">ENG10</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Setup</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Version: </td>
+            <td class="CellNoColor">CANoe.CAN.LIN.Ethernet.AMD/XCP.SmartCharging /pro 14.2.43.3 (SP2)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Configuration: </td>
+            <td class="CellNoColor">D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\V15107A_SYQT_CANoeConfiguration_G60.cfg</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database AE_CAN_FD on AE_CAN_FD: </td>
+            <td class="CellNoColor">D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\CANdb\G60\BusDescription_SP2021_21KW45_V99_AE_CAN_FD_V105_fern_patch_20211203#2112021255.arxml (2022-03-18 09:54:35)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database CHAdeMO_CAN on CHAdeMO: </td>
+            <td class="CellNoColor">D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\Models\QCHG\CHAdeMO_CAN.dbc (2021-10-15 10:53:56)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database EAPC_CCU_CAN_1 on G08CAN: </td>
+            <td class="CellNoColor">D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\CANdb\BNE_CCU_Boardnet_1813.arxml (2021-10-15 10:53:41)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database FACTORY on AE_CAN_FD: </td>
+            <td class="CellNoColor">D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\CANdb\FACTORY.dbc (2021-10-15 10:53:53)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database TestPro_BMW03_CCU_PreC_G70 on XCPCAN: </td>
+            <td class="CellNoColor">D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\CANdb\TestPro_BMW03_CCU_PreC_G70.dbc (2021-10-15 10:53:43)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database LDF_SP2021_21KW45_V95_H_LIN_4_V194 on H_LIN_4: </td>
+            <td class="CellNoColor">D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\CANdb\G60\LDF_SP2021_21KW45_V95_H_LIN_4_V194.ldf (2022-03-18 09:54:36)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Diagnostic Description of CCU_01: </td>
+            <td class="CellNoColor">CCU_01, ODX:CCU_01*D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\Diag\G60_new\G070_DKC_CCU__01.000_000_105.pdx</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Test Module Name: </td>
+            <td class="CellNoColor">SYQT-03-0001-0011</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Test Module File: </td>
+            <td class="CellNoColor">D:\01_WorkProduct\V15107A_SYQT_CANoeConfigration_Trunk_G60_new\TestScript\FuSi\SYQT-03-0001-0011.can</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Last modification of Test Module File: </td>
+            <td class="CellNoColor">2021-10-15, 10:54:07</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Windows Computer Name: </td>
+            <td class="CellNoColor">BKW-05</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module AsrNM33: </td>
+            <td class="CellNoColor">AsrNM (Version 3.3.70 Windows 32-Bit), c:\CANrtk\Exec32\SynchronizedFiles\AsrNM33.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module AsrPDUIL: </td>
+            <td class="CellNoColor">CANoe AutoSAR PDU Interaction Layer NL (General OEM) Version 1.85.54 (Nov 26 2020 12:25:42) , c:\CANrtk\Exec32\SynchronizedFiles\AsrPDUIL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module SCC_ChargePoint: </td>
+            <td class="CellNoColor">Smart Charging Simulation (Charge Point) (Version 2.1.2.5), c:\CANrtk\Exec32\SynchronizedFiles\SCC_ChargePoint.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module J1939TestServiceLibraryNL: </td>
+            <td class="CellNoColor">J1939 Test Service Library for CANoe, Version 14.2.43.0, c:\CANrtk\Exec32\SynchronizedFiles\J1939TestServiceLibraryNL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module CANoeILNLVector: </td>
+            <td class="CellNoColor">CANoe Interaction Layer NL (Vector) Version 3.17.92 (Nov 20 2020 11:34:21) , c:\CANrtk\Exec32\SynchronizedFiles\CANoeILNLVector.dll</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Hardware</div>
+      <div class="Indentation">
+        <div class="Heading4">CAN Channel Interfaces</div>
+        <div class="Indentation">
+          <table>
+            <tr>
+              <th class="TableHeadingCell">Channel</th>
+              <th class="TableHeadingCell">Device</th>
+              <th class="TableHeadingCell">Serial number</th>
+              <th class="TableHeadingCell">Driver DLL version</th>
+              <th class="TableHeadingCell">Driver version</th>
+            </tr>
+            <tr>
+              <td class="NumberCell">1</td>
+              <td class="NumberCell">VT6204</td>
+              <td class="NumberCell">3099</td>
+              <td class="NumberCell">20.30.16</td>
+              <td class="NumberCell">10.3.18</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">2</td>
+              <td class="NumberCell">VT6204</td>
+              <td class="NumberCell">3099</td>
+              <td class="NumberCell">20.30.16</td>
+              <td class="NumberCell">10.3.18</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">3</td>
+              <td class="NumberCell">VT6204</td>
+              <td class="NumberCell">3099</td>
+              <td class="NumberCell">20.30.16</td>
+              <td class="NumberCell">10.3.18</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">4</td>
+              <td class="NumberCell">VT6204</td>
+              <td class="NumberCell">3099</td>
+              <td class="NumberCell">20.30.16</td>
+              <td class="NumberCell">10.3.18</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="Indentation">
+        <div class="Heading4">LIN Channel Interfaces</div>
+        <div class="Indentation">
+          <table>
+            <tr>
+              <th class="TableHeadingCell">Channel</th>
+              <th class="TableHeadingCell">Device</th>
+              <th class="TableHeadingCell">Serial number</th>
+              <th class="TableHeadingCell">Driver DLL version</th>
+              <th class="TableHeadingCell">Driver version</th>
+              <th class="TableHeadingCell">LIN Firmware version</th>
+            </tr>
+            <tr>
+              <td class="NumberCell">1</td>
+              <td class="NumberCell">VT6204</td>
+              <td class="NumberCell">2077</td>
+              <td class="NumberCell">20.30.16</td>
+              <td class="NumberCell">10.3.18</td>
+              <td class="NumberCell">1.73</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="Indentation">
+        <div class="Heading4">VT-System</div>
+        <div class="Indentation">
+          <table>
+            <tr>
+              <th class="TableHeadingCell">Device</th>
+              <th class="TableHeadingCell">Serial number</th>
+              <th class="TableHeadingCell">Firmware version</th>
+              <th class="TableHeadingCell">Hardware version</th>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT8012A</td>
+              <td class="NumberCell">4156</td>
+              <td class="NumberCell">0.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT6204</td>
+              <td class="NumberCell">3099</td>
+              <td class="NumberCell">0.0.0</td>
+              <td class="NumberCell">0x10</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT6204</td>
+              <td class="NumberCell">2077</td>
+              <td class="NumberCell">0.0.0</td>
+              <td class="NumberCell">0x10</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2820</td>
+              <td class="NumberCell">3308</td>
+              <td class="NumberCell">1.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2820</td>
+              <td class="NumberCell">3309</td>
+              <td class="NumberCell">1.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2820</td>
+              <td class="NumberCell">3366</td>
+              <td class="NumberCell">1.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2820</td>
+              <td class="NumberCell">3367</td>
+              <td class="NumberCell">1.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2820</td>
+              <td class="NumberCell">3375</td>
+              <td class="NumberCell">1.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT7001A</td>
+              <td class="NumberCell">4573</td>
+              <td class="NumberCell">2.1.1</td>
+              <td class="NumberCell">0x11</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT8012A</td>
+              <td class="NumberCell">4158</td>
+              <td class="NumberCell">0.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT1004A</td>
+              <td class="NumberCell">7021</td>
+              <td class="NumberCell">2.1.6</td>
+              <td class="NumberCell">0x3</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT1004A</td>
+              <td class="NumberCell">7022</td>
+              <td class="NumberCell">2.1.6</td>
+              <td class="NumberCell">0x3</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2816</td>
+              <td class="NumberCell">3450</td>
+              <td class="NumberCell">1.3.5</td>
+              <td class="NumberCell">0x20</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2816</td>
+              <td class="NumberCell">3518</td>
+              <td class="NumberCell">1.3.5</td>
+              <td class="NumberCell">0x20</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2816</td>
+              <td class="NumberCell">3524</td>
+              <td class="NumberCell">1.3.5</td>
+              <td class="NumberCell">0x20</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2004A</td>
+              <td class="NumberCell">5259</td>
+              <td class="NumberCell">2.1.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2004A</td>
+              <td class="NumberCell">5260</td>
+              <td class="NumberCell">2.1.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2004A</td>
+              <td class="NumberCell">5263</td>
+              <td class="NumberCell">2.1.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2004A</td>
+              <td class="NumberCell">5267</td>
+              <td class="NumberCell">2.1.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT8012A</td>
+              <td class="NumberCell">4159</td>
+              <td class="NumberCell">0.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT7900A</td>
+              <td class="NumberCell">14</td>
+              <td class="NumberCell">1.1.7</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT1004A</td>
+              <td class="NumberCell">7026</td>
+              <td class="NumberCell">2.1.6</td>
+              <td class="NumberCell">0x3</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2848</td>
+              <td class="NumberCell">2731</td>
+              <td class="NumberCell">1.2.10</td>
+              <td class="NumberCell">0x10</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2820</td>
+              <td class="NumberCell">3389</td>
+              <td class="NumberCell">1.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">VT2820</td>
+              <td class="NumberCell">3414</td>
+              <td class="NumberCell">1.0.0</td>
+              <td class="NumberCell">0x0</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <a name="TestOverview"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">Test Overview</div>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation">
+      <table class="DefaultTable">
+        <tr>
+          <td style="padding-right: 0.5em;" class="CellNoColor">Test begin: </td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2022-03-18 18:44:54</td>
+          <td class="CellNoColor">(logging timestamp   43.900976)</td>
+        </tr>
+        <tr>
+          <td style="padding-right: 0.5em;" class="CellNoColor">Test end: </td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2022-03-18 18:46:12</td>
+          <td class="CellNoColor" nowrap>(logging timestamp  121.600976)</td>
+        </tr>
+      </table>
+      <div class="Heading4">Statistics</div>
+      <div class="Indentation">
+        <table class="OverviewTable">
+          <tr>
+            <td class="DefineCell">Overall number of test cases </td>
+            <td class="NumberCell" width="60">1</td>
+            <td class="DefaultCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Executed test cases </td>
+            <td class="NumberCell">1</td>
+            <td class="DefaultCell">100% of all test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Not executed test cases </td>
+            <td class="NumberCell">0</td>
+            <td class="DefaultCell">0% of all test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases passed </td>
+            <td class="NumberCellPositiveResult">1</td>
+            <td class="NumberCellPositiveResult">100% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases failed </td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell">0% of executed test cases</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Case Results</div>
+      <div class="Indentation">
+        <table class="OverviewTable">
+          <tr>
+            <td class="DefineCell">1</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-558503584_9">FunctionalSafety</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <a name="TestModuleInfo"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_" href="javascript:switchAll('',document.all['lnk_'].text)">[−]</a>
+        </td>
+        <td>
+          <div class="Heading2">Test Module Information</div>
+        </td>
+      </tr>
+    </table>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <big class="Heading2">Test Case Details</big>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_1" href="javascript:switchAll('1',document.all['lnk_1'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">1 <a name="i__-558503584_9">FunctionalSafety</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_1">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-03-18 18:44:54</td>
+            <td class="CellNoColor">(logging timestamp   43.900976)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-03-18 18:46:12</td>
+            <td class="CellNoColor" nowrap>(logging timestamp  121.600976)</td>
+          </tr>
+        </table>
+        <p>
+          <b>External Resource</b>: <a href="Calib_Set_Common_report.html">Calib_Set_Common_report.html</a>
+        </p>
+      </div>
+      <div class="Indentation">
+        <table class="ScreenOnly">
+          <tbody>
+            <tr>
+              <td>
+                <a class="Undecorated" href="javascript:showTable('1_')">[expand test steps]</a>
+              </td>
+              <td width="2px"></td>
+              <td>
+                <a class="Undecorated" href="javascript:hideTable('1_')">[collapse test steps]</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">1. TestInitialize: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">  54.100976</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Immediately resumed on setup of wait condition.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  83.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1_i__-558503584_53" href="javascript:switchTable('1_i__-558503584_53')">[−]</a>
+                    </td>
+                    <td>Confirm CCU startup  (HV side)</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1_i__-558503584_53">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;" colspan="8">Measurement Vaule</td>
+                </tr>
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;"></td>
+                  <td class="DefineCell">Voltage[V]</td>
+                  <td class="DefineCell">Current[A]</td>
+                  <td class="DefineCell">Frequency[Hz]</td>
+                  <td class="DefineCell">PowerFactor</td>
+                  <td class="DefineCell">Power[W]</td>
+                  <td class="DefineCell">Efficiency[%]</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">AC L1 Input</td>
+                  <td class="DefaultCell">0.61</td>
+                  <td class="DefaultCell">6.e-003</td>
+                  <td class="DefaultCell">0.</td>
+                  <td class="DefaultCell">0.1702</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">AC L2 Input</td>
+                  <td class="DefaultCell">0.35</td>
+                  <td class="DefaultCell">7.e-003</td>
+                  <td class="DefaultCell">0.</td>
+                  <td class="DefaultCell">0.194</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">AC L3 Input</td>
+                  <td class="DefaultCell">0.56</td>
+                  <td class="DefaultCell">6.e-003</td>
+                  <td class="DefaultCell">0.</td>
+                  <td class="DefaultCell">4.23e-002</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">AC All Input</td>
+                  <td class="DefaultCell">0.51</td>
+                  <td class="DefaultCell">6.e-003</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">3.83e-002</td>
+                  <td class="DefaultCell">0.</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">HVDC Output</td>
+                  <td class="DefaultCell">8.94</td>
+                  <td class="DefaultCell">4.e-003</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">0.</td>
+                  <td class="DefaultCell">1.e+013</td>
+                  <td class="DefaultCell">-----</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">LVDCDC Output</td>
+                  <td class="DefaultCell">14.01</td>
+                  <td class="DefaultCell">6.e-002</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">0.</td>
+                  <td class="DefaultCell">1.e+013</td>
+                  <td class="DefaultCell">-----</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  83.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1_i__-558503584_405" href="javascript:switchTable('1_i__-558503584_405')">[−]</a>
+                    </td>
+                    <td>AC Charger / LvDCDC Status</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1_i__-558503584_405">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;" colspan="3">AC Charger L1</td>
+                  <td class="DefineCell">LvDCDC</td>
+                </tr>
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">L1</td>
+                  <td class="DefineCell">L2</td>
+                  <td class="DefineCell">L3</td>
+                  <td class="DefineCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Standby</td>
+                  <td class="DefaultCell">Standby</td>
+                  <td class="DefaultCell">Standby</td>
+                  <td class="DefaultCell">Standby</td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  83.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1_i__-558503584_492" href="javascript:switchTable('1_i__-558503584_492')">[−]</a>
+                    </td>
+                    <td>Confirm KL30 Voltage/Current</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1_i__-558503584_492">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;"></td>
+                  <td class="DefineCell">CANoe Request</td>
+                  <td class="DefineCell">Voltage command to power supply</td>
+                  <td class="DefineCell">Measured by the power supply module(VT7001)</td>
+                  <td class="DefineCell">Voltage near CCU</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Voltage[V]</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">14.2</td>
+                  <td class="DefaultCell">13.95</td>
+                  <td class="DefaultCell">13.89</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Current[A]</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">0.8766</td>
+                  <td class="DefaultCell">-----</td>
+                  <td class="DefaultCell">-----</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  83.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1_i__-558503584_619" href="javascript:switchTable('1_i__-558503584_619')">[−]</a>
+                    </td>
+                    <td>The Error cause table of AC Charge.<br>"Current" now exists error.      "Past" is an error that has been detected more than once.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1_i__-558503584_619">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 40px;" colspan="2"></td>
+                  <td class="DefineCell" colspan="2">Error cause L1</td>
+                  <td class="DefineCell" colspan="2">Error cause L2</td>
+                  <td class="DefineCell" colspan="2">Error cause L3</td>
+                </tr>
+                <tr>
+                  <td class="DefineCell" style="text-indent: 40px;" colspan="2"></td>
+                  <td class="DefineCell">current</td>
+                  <td class="DefineCell">past</td>
+                  <td class="DefineCell">current</td>
+                  <td class="DefineCell">past</td>
+                  <td class="DefineCell">current</td>
+                  <td class="DefineCell">past</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit0</td>
+                  <td class="DefaultCell">Hardware error</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit1</td>
+                  <td class="DefaultCell">Undervoltage AC</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit2</td>
+                  <td class="DefaultCell">Overrvoltage AC</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit3</td>
+                  <td class="DefaultCell">Overcurrent AC</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit4</td>
+                  <td class="DefaultCell">Undervoltage DC</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit5</td>
+                  <td class="DefaultCell">Overrvoltage DC</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit6</td>
+                  <td class="DefaultCell">Overcurrent DC</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit7</td>
+                  <td class="DefaultCell">Temperature</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit8</td>
+                  <td class="DefaultCell">Communication failure</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit9</td>
+                  <td class="DefaultCell">Target mode not possible</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit10</td>
+                  <td class="DefaultCell">Efficiency too low</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit11</td>
+                  <td class="DefaultCell">Other reasons</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit12</td>
+                  <td class="DefaultCell">N-Line overcurrent</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit13</td>
+                  <td class="DefaultCell">Difference of AC-current larger than 2A</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  83.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1_i__-558503584_1270" href="javascript:switchTable('1_i__-558503584_1270')">[−]</a>
+                    </td>
+                    <td>The Error cause table of LVDCDC.<br>"Current" now exists error.      "Past" is an error that has been detected more than once.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1_i__-558503584_1270">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 40px;" colspan="2"></td>
+                  <td class="DefineCell">current</td>
+                  <td class="DefineCell">past</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit0</td>
+                  <td class="DefaultCell">Hardware error</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit1</td>
+                  <td class="DefaultCell">Undervoltage HV</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit2</td>
+                  <td class="DefaultCell">Overrvoltage HV</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit3</td>
+                  <td class="DefaultCell">Overcurrent HV</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit4</td>
+                  <td class="DefaultCell">Undervoltage LV</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit5</td>
+                  <td class="DefaultCell">Overrvoltage LV</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit6</td>
+                  <td class="DefaultCell">Overcurrent LV</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit7</td>
+                  <td class="DefaultCell">Overtemperature</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit8</td>
+                  <td class="DefaultCell">Communication error</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit9</td>
+                  <td class="DefaultCell">Target mode not possible</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit10</td>
+                  <td class="DefaultCell">Target voltage not reacheable</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">bit11</td>
+                  <td class="DefaultCell">Other reasons</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell"></td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  85.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">accuracy 0.93</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  86.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">accuracy 0.44</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  87.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">accuracy 0.45</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  88.800976</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">accuracy 1.00</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  88.800976</td>
+            <td class="NumberCell">Result</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1_i__-558503584_1640" href="javascript:switchTable('1_i__-558503584_1640')">[−]</a>
+                    </td>
+                    <td>Proximity Structured Data</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1_i__-558503584_1640">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Proximity difine</td>
+                  <td class="DefineCell">Input Resistance [Ohm]</td>
+                  <td class="DefineCell">XCP Resistance [Ohm]</td>
+                  <td class="DefineCell">Accuracy [%]</td>
+                  <td class="DefineCell">Criteria [%]</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">IEC 13A</td>
+                  <td class="DefaultCell">1500</td>
+                  <td class="DefaultCell">1486</td>
+                  <td class="DefaultCell">0.9333</td>
+                  <td class="DefaultCell">5</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">IEC 20A</td>
+                  <td class="DefaultCell">680.</td>
+                  <td class="DefaultCell">677.</td>
+                  <td class="DefaultCell">0.4412</td>
+                  <td class="DefaultCell">5</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">IEC 32A</td>
+                  <td class="DefaultCell">220.</td>
+                  <td class="DefaultCell">219.</td>
+                  <td class="DefaultCell">0.4545</td>
+                  <td class="DefaultCell">5</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">IEC 70A</td>
+                  <td class="DefaultCell">100.</td>
+                  <td class="DefaultCell">99.</td>
+                  <td class="DefaultCell">1.</td>
+                  <td class="DefaultCell">5</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">2. TestFinalize: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">  92.600976</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Immediately resumed on setup of wait condition.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">  92.600976</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Immediately resumed on setup of wait condition.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">  92.600976</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Immediately resumed on setup of wait condition.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell"> 105.400976</td>
+            <td class="NumberCell">set</td>
+            <td class="DefaultCell">Chager Operation State:Standby</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">End of Report</div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

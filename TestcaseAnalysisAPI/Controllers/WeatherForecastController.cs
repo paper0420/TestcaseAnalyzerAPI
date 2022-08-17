@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TestCaseAnalysisAPI.App;
 
+
 namespace TestcaseAnalysisAPI.Controllers
 {
     [ApiController]
@@ -37,32 +38,33 @@ namespace TestcaseAnalysisAPI.Controllers
             return "XX";
         }
 
-        public async Task<string> OnPostUploadAsync(IFormFile newFile, IFormFile currentFile)
+        public async Task<string> OnPostUploadAsync(IFormFile newFile, IFormFile currentFile,string type)
         {
-            if(newFile==null || currentFile == null)
-            {
-                return "Please select both files";
-            }
+            //if(newFile==null || currentFile == null)
+            //{
+            //    return "Please select both files";
+            //}
 
-            var newFilePath = "Upload/newFile.xlsx";
+            //var newFilePath = "Upload/newFile.xlsx";
             
-            using (var stream = System.IO.File.Create(newFilePath))
-            {
-                await newFile.CopyToAsync(stream);
-            }
+            //using (var stream = System.IO.File.Create(newFilePath))
+            //{
+            //    await newFile.CopyToAsync(stream);
+            //}
 
-            var currentFilePath = "Upload/currentFile.xlsx";
-            using (var stream = System.IO.File.Create(currentFilePath))
-            {
-                await currentFile.CopyToAsync(stream);
-            }
+            //var currentFilePath = "Upload/currentFile.xlsx";
+            //using (var stream = System.IO.File.Create(currentFilePath))
+            //{
+            //    await currentFile.CopyToAsync(stream);
+            //}
 
-            App baseLineApp = new App();
+            MyApp baseLineApp = new MyApp();
 
 
-            var output = baseLineApp.RunMyApp(newFilePath, currentFilePath);
+            //var output = baseLineApp.RunMyApp(newFilePath, currentFilePath,type);
+            var output = baseLineApp.RunMyApp(null, null, type);
 
-            if(output == null)
+            if (output == null)
             {
                 return "No output";
             }

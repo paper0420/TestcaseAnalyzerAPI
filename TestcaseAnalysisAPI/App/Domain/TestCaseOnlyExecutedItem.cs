@@ -7,14 +7,18 @@ namespace TestCaseAnalysisAPI.App
 {
     public class TestCaseOnlyExecutedItem
     {
-        public TestCaseOnlyExecutedItem(IExcelDataReader reader)
+        public TestCaseOnlyExecutedItem(IExcelDataReader reader, ExcelColumnReader index)
         {
-            this.ID = reader.GetValue(0)?.ToString();
-            var idsAsString = reader.GetValue(6)?.ToString()?.Split('\n') ?? new string[0];
+            this.ID = reader.GetValue(index.TestcaseSpecIDIndex)?.ToString();
+            this.Objective = reader.GetString(index.TestcaseSpecObjectiveIndex);
+            var idsAsString = reader.GetValue(index.TestcaseSpecRequirementIndex)?
+                .ToString()?
+                .Split('\n') ?? new string[0];
 
             //var requirementIds = new List<int>();
             var requirementIds = new List<string>();
             var epicIds = new List<string>();
+
 
             foreach (var idAsString in idsAsString)
             {
@@ -37,7 +41,13 @@ namespace TestCaseAnalysisAPI.App
             this.RequirementIDs = requirementIds.ToArray();
             this.EpicIDs = epicIds.ToArray();
             this.G70 = reader.GetValue(13)?.ToString();
-            this.Type = reader.GetValue(8)?.ToString();
+            this.G60 = reader.GetValue(index.TestcaseSpecG60Index)?.ToString();
+            this.Type = reader.GetValue(index.TestcaseSpecTypeIndex)?.ToString();
+            this.Result = reader.GetValue(17)?.ToString().Replace("\n", " ");
+
+            this.ItemClass1 = reader.GetString(1);
+            this.ItemClass2 = reader.GetString(2);
+            this.ItemClass3 = reader.GetString(3);
 
         }
 
@@ -45,7 +55,14 @@ namespace TestCaseAnalysisAPI.App
         public string[] RequirementIDs { get; }
         public string[] EpicIDs { get; }
         public string G70 { get; }
+        public string G60 { get; }
+
         public string Type { get; }
+        public string Result { get; }
+        public string Objective { get; }
+        public string ItemClass1 { get; }
+        public string ItemClass2 { get; }
+        public string ItemClass3 { get; }
 
     }
 }

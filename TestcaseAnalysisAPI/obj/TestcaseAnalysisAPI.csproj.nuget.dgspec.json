@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code_Project\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI.csproj": {}
+    "C:\\Users\\sumit\\Desktop\\Code_Projects\\TestcaseAnalyzerAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI.csproj": {}
   },
   "projects": {
-    "D:\\Code_Project\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI.csproj": {
+    "C:\\Users\\sumit\\Desktop\\Code_Projects\\TestcaseAnalyzerAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code_Project\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI.csproj",
+        "projectUniqueName": "C:\\Users\\sumit\\Desktop\\Code_Projects\\TestcaseAnalyzerAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI.csproj",
         "projectName": "TestcaseAnalysisAPI",
-        "projectPath": "D:\\Code_Project\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI.csproj",
-        "packagesPath": "C:\\Users\\sumitraj\\.nuget\\packages\\",
-        "outputPath": "D:\\Code_Project\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI\\obj\\",
+        "projectPath": "C:\\Users\\sumit\\Desktop\\Code_Projects\\TestcaseAnalyzerAPI\\TestcaseAnalysisAPI\\TestcaseAnalysisAPI.csproj",
+        "packagesPath": "C:\\Users\\sumit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sumit\\Desktop\\Code_Projects\\TestcaseAnalyzerAPI\\TestcaseAnalysisAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sumitraj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sumit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "ExcelDataReader": {
               "target": "Package",
@@ -46,15 +46,19 @@
             },
             "FreeSpire.XLS": {
               "target": "Package",
-              "version": "[12.2.0, )"
+              "version": "[12.7.0, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.43, )"
             },
             "IronXL.Excel": {
               "target": "Package",
-              "version": "[2020.9.1, )"
+              "version": "[2022.7.7362, )"
             },
             "System.Text.Encoding.CodePages": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -63,16 +67,11 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -81,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

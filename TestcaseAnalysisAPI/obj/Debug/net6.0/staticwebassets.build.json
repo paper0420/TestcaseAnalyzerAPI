@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qZefQEv56gKtuHVfA2gM7J2JoYxKZCzXBnel8zsEa5k=",
+  "Source": "TestcaseAnalysisAPI",
+  "BasePath": "_content/TestcaseAnalysisAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

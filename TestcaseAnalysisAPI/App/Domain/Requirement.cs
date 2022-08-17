@@ -4,22 +4,31 @@ namespace TestCaseAnalysisAPI.App
 {
     public class Requirement
     {
-        public Requirement(IExcelDataReader reader)
+        public Requirement(IExcelDataReader reader, ExcelColumnReader index)
         {
 
-            var id = reader.GetValue(1);
+            this.changeStatus = reader.GetString(index.ChangeStatusIndex);
+            this.panaStatus = reader.GetString(index.ChangeStatusIndex);
+
+            //var fusaType = reader.GetValue(index.FuSaTypeIndex);
+            //if (!string.IsNullOrWhiteSpace(fusaType?.ToString()))
+            //{
+            //    this.FusaType = reader.GetString(index.FuSaTypeIndex).Trim();
+
+            //}
+            this.FusaType = reader.GetValue(index.FuSaTypeIndex)?.ToString();
+
+            var id = reader.GetValue(index.KLHIDIndex);
             if (!string.IsNullOrWhiteSpace(id?.ToString()))
             {
-                this.ID = reader.GetValue(1)?.ToString();
+                this.ID = reader.GetValue(index.KLHIDIndex)?.ToString();
             }
 
+            this.Objective = reader.GetString(index.KLHObjectiveIndex);
 
-            this.Objective = reader.GetString(5);
 
-            this.changeStatus = reader.GetString(3);
-            this.panaStatus = reader.GetString(10);
-            this.VerificationMeasure = reader.GetValue(16)?.ToString().Replace("\n","");
-            this.Type = reader.GetValue(8)?.ToString();
+            this.VerificationMeasure = reader.GetValue(13)?.ToString().Replace("\n", "");
+            this.Type = reader.GetValue(4)?.ToString();
             //this.EpicIDs = reader
             //    .GetString(21)?
             //    .Split("\n", System.StringSplitOptions.RemoveEmptyEntries)
@@ -34,6 +43,7 @@ namespace TestCaseAnalysisAPI.App
         public string VerificationMeasure { get; }
         public string Type { get; }
         public string[] EpicIDs { get; }
+        public string FusaType { get; }
 
 
     }

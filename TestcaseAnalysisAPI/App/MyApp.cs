@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using TestcaseAnalysisAPI.App.FileReader;
 using TestCaseAnalysisAPI.App.ReportGenerators;
+using TestcaseAnalysisAPI.App;
 
 namespace TestCaseAnalysisAPI.App
 {
     public class MyApp
     {
-        public string RunMyApp(string newFile, string currentFile, string type)
+        public void RunMyApp(string carLine, string reportType)
         {
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             var reader = new ExcelReader();
-
-       
-            var currentKLH = reader.ReadFile(FileNames.KlhFile, "KLH_BL11.1", 1, (t, y) => new Requirement(t, y)).ToList();
+            var userInput = new FinalReportGenerationUI();
+            var currentKLHs = reader.ReadFile(FileNames.TestSpecFile, "KLH", 1, (t, y) => new Requirement(t, y)).ToList();
+            var safetyGoalKLHs = reader.ReadFile(FileNames.TestSpecFile, "SafetyGoal", 1, (t, y) => new SafetyGoalKLH(t, y)).ToList();
             var executedTestcases = reader.ReadFile(FileNames.TestSpecFile, "Test_Item", 1, (t, y) => new TestCaseOnlyExecutedItem(t, y)).ToList();
-            var htmlReports = HtmlReader.ReadHtmlFullReport().ToList();
+
+            var htmlReports = HtmlReader.ReadHtmlFullReport(userInput.ReportType).ToList();
 
             var baseSpec = new SpecParameters(
-              currentRequirments: currentKLH,
-              testCases: executedTestcases,
-              htmlDatas: htmlReports);
-            
-            FinalReportGenerator.GenerateReport(baseSpec, "HV");
+                currentRequirments: currentKLHs,
+                testCases: executedTestcases,
+                htmlDatas: htmlReports,
+                safetyGoalKLHs: safetyGoalKLHs);
 
-
-            return "No data";
-
+            FinalReportGenerator.GenerateReport(baseSpec, userInput.ReportType, userInput.CarLine, userInput.SWRelease);
 
         }
     }

@@ -30,3 +30,7 @@ C:\Users\sumit\Desktop\Code_Projects\TestcaseAnalyzerAPI\TestcaseAnalysisAPI\obj
 C:\Users\sumit\Desktop\Code_Projects\TestcaseAnalyzerAPI\TestcaseAnalysisAPI\obj\Debug\net6.0\TestcaseAnalysisAPI.genruntimeconfig.cache
 C:\Users\sumit\Desktop\Code_Projects\TestcaseAnalyzerAPI\TestcaseAnalysisAPI\obj\Debug\net6.0\ref\TestcaseAnalysisAPI.dll
 C:\Users\sumit\Desktop\Code_Projects\TestcaseAnalyzerAPI\TestcaseAnalysisAPI\bin\Debug\net6.0\HtmlAgilityPack.dll
+C:\Users\sumit\Desktop\Code_Projects\TestcaseAnalyzerAPI\TestcaseAnalysisAPI\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\sumit\Desktop\Code_Projects\TestcaseAnalyzerAPI\TestcaseAnalysisAPI\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\sumit\Desktop\Code_Projects\TestcaseAnalyzerAPI\TestcaseAnalysisAPI\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\sumit\Desktop\Code_Projects\TestcaseAnalyzerAPI\TestcaseAnalysisAPI\bin\Debug\net6.0\System.IO.Packaging.dll

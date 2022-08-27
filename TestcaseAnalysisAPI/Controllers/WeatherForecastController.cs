@@ -27,52 +27,54 @@ namespace TestcaseAnalysisAPI.Controllers
         }
 
         [HttpGet]
-        public string Get(string file)
+        public string Get()
         {
-            if (file == null)
-            {
-                return "No data";
-
-            }
 
             return "XX";
         }
 
-        public async Task<string> OnPostUploadAsync(IFormFile newFile, IFormFile currentFile,string type)
+
+        [HttpPost]
+        public string Post([FromForm]string reportType, [FromForm] string carLine)
         {
-            //if(newFile==null || currentFile == null)
-            //{
-            //    return "Please select both files";
-            //}
+            var mainApp = new MyApp();
+                     
+            mainApp.RunMyApp(carLine,reportType);
 
-            //var newFilePath = "Upload/newFile.xlsx";
-            
-            //using (var stream = System.IO.File.Create(newFilePath))
-            //{
-            //    await newFile.CopyToAsync(stream);
-            //}
-
-            //var currentFilePath = "Upload/currentFile.xlsx";
-            //using (var stream = System.IO.File.Create(currentFilePath))
-            //{
-            //    await currentFile.CopyToAsync(stream);
-            //}
-
-            MyApp baseLineApp = new MyApp();
-
-
-            //var output = baseLineApp.RunMyApp(newFilePath, currentFilePath,type);
-            var output = baseLineApp.RunMyApp(null, null, type);
-
-            if (output == null)
-            {
-                return "No output";
-            }
-
-            return output;
-
-                       
+            return $"Report Done: {carLine} {reportType}";
         }
+
+        //public async Task<string> OnPostUploadAsync(IFormFile newFile, IFormFile currentFile)
+        //{
+        //    if (newFile == null || currentFile == null)
+        //    {
+        //        return "Please select both files";
+        //    }
+
+        //    var newFilePath = "Upload/newFile.xlsx";
+
+        //    using (var stream = System.IO.File.Create(newFilePath))
+        //    {
+        //        await newFile.CopyToAsync(stream);
+        //    }
+
+        //    var currentFilePath = "Upload/currentFile.xlsx";
+        //    using (var stream = System.IO.File.Create(currentFilePath))
+        //    {
+        //        await currentFile.CopyToAsync(stream);
+        //    }
+
+        //    MyApp baseLineApp = new MyApp();
+
+
+        //    var output = baseLineApp.RunMyApp(newFilePath, currentFilePath, type);
+        //    var output = baseLineApp.RunMyApp(null, null, type);
+
+
+        //    return type;
+
+
+        //}
 
     }
 }

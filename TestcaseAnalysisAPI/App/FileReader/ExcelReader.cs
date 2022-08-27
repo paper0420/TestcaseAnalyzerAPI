@@ -37,7 +37,7 @@ namespace TestcaseAnalysisAPI.App.FileReader
 
 
                             reader.Read();
-                            var index = new ExcelColumnReader(reader, file);
+                            var index = new ExcelColumnReader(reader, file,sheet);
 
                             while (reader.Read())
                             {
